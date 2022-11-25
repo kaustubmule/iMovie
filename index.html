@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <title>iMOVIE</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      padding: 0;
+      margin: 0;
+      color: #333333;
+    }
+
+    .wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      letter-spacing: 4px;
+      overflow: hidden;
+      text-align: center;
+      clip: rect(0, auto, auto, 0);
+    }
+
+    .wrapper h1 {
+      font-size: 80px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+      text-shadow: 0 2px 2px #000;
+    }
+
+    .wrapper p {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .text-wrapper {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      overflow: hidden;
+    }
+
+    .banner {
+      background-image: url(intro.png);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .banner p {
+      color: #fff;
+      font-size: 30px;
+      margin: 0;
+    }
+
+    .wrapper:nth-child(1) {
+      background-color: rgb(0, 0, 0);
+      top: 0;
+      z-index: 1;
+    }
+
+    .wrapper:nth-child(1) .text-wrapper {
+      transform: translate(-50%, -50%);
+    }
+
+    .wrapper:nth-child(2) {
+      background-image: url(parallex1\ .png);
+      background-size: cover;
+      top: 100vh;
+      z-index: 2;
+    }
+
+    .wrapper:nth-child(2) .text-wrapper {
+      transform: translate(-50%, -50%);
+    }
+
+    .wrapper:nth-child(3) {
+      background-image: url(parallex2.png);
+      background-size: cover;
+      top: 200vh;
+      z-index: 3;
+    }
+
+    .wrapper:nth-child(3) .text-wrapper {
+      transform: translate(-50%, -50%);
+    }
+
+    .wrapper:nth-child(4) {
+      background-image: url(parallex3.png);
+      background-size: cover;
+      top: 300vh;
+      z-index: 4;
+    }
+
+    .wrapper:nth-child(4) .text-wrapper {
+      transform: translate(-50%, -50%);
+    }
+
+    .wrapper:nth-child(5) {
+      background-image: url(parallex4.png);
+      background-size: cover;
+      top: 400vh;
+      z-index: 5;
+    }
+
+    .wrapper:nth-child(5) .text-wrapper {
+      transform: translate(-50%, -50%);
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+    }
+
+    a {
+      text-decoration: rgb(255, 251, 251);
+      background-color: rgb(255, 250, 250);
+      width: 250px;
+      padding: 10px 10px;
+      display: inherit;
+      color: rgb(0, 0, 0);
+    }
+
+    /*Scroll Bar*/
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background-color: #000;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #ff914d;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+
+  <div class="wrapper banner">
+    <div class="text-wrapper">
+      <h1>
+        <font color="#ff914d">i</font>Movie
+      </h1>
+      <p></p>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="text-wrapper">
+      <h1 style="color:rgb(228, 228, 228);">
+        <font color="#ff914d">"</font>ALL IN ONE PLACE<font color="#ff914d">"</font>
+      </h1>
+      <p style="color:rgb(228, 228, 228);"> Get personal recommendations and see what's new across your favorite
+        streaming services.</p>
+    </div>
+  </div>
+  <div class="wrapper">
+
+    <div class="text-wrapper">
+      <h1 style="color:rgb(228, 228, 228);">
+        <font color="#ff914d">"</font>One search to rule them all<font color="#ff914d">"</font>
+      </h1>
+      <p style="color:rgb(228, 228, 228);">Never go back and forth between your services again to find out if a movie or
+        TV show is available.</p>
+    </div>
+
+  </div>
+  <div class="wrapper">
+    <div class="text-wrapper">
+      <h1 style="color:rgb(228, 228, 228);">
+        <font color="#ff914d">"</font>Thousands of Titles<font color="#ff914d">"</font>
+      </h1>
+      <p style="color:rgb(228, 228, 228);">Keep track of all the TV shows and movies you want to watch in one list
+        across all your devices</p>
+    </div>
+  </div>
+  <div class="wrapper">
+
+    <div class="text-wrapper">
+      <h1 style="color:rgb(228, 228, 228);">Start Watching Now!!</h1>
+      <p style="color:rgb(228, 228, 228);">Only with iMOVIES</p>
+      <p style="padding: 15px 250px ; border-radius: 10px;"><a href="home.html">Start Streaming</a></p>
+    </div>
+  </div>
+
+</body>
+
+</html>

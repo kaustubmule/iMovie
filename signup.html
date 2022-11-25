@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="formstyle.css">
+
+  <script>
+    function validateform() {
+      var name = document.myform.name.value;
+      var number = document.myform.phoneno.value;
+      var emailid = document.myform.emailid.value;
+      var password = document.myform.password.value;
+      var eregx = /^([a-zA-Z0-9]+)@([a-zA-Z0-9]+).([a-z]{2,20})$/;
+      var nregx = /^[7-9][0-9]{9}$/;
+      if (name == "") {
+        alert("Empty Name");
+        return false;
+      }
+      else if (emailid == "") {
+        alert("Email Empty");
+        return false;
+      }
+      else if (!eregx.test(emailid)) {
+        alert("Email Invalid");
+        return false;
+      }
+      else if (number == "") {
+        alert("Phone Number Empty");
+        return false;
+      }
+      else if (!nregx.test(number)) {
+        alert("Phone Number Invalid");
+        return false;
+      }
+      else if (password == "") {
+        alert("Password Empty");
+        return false;
+      }
+      else if (password.length < 8) {
+        alert("Password length too small");
+        return false;
+      }
+      else if (!password.includes("@") && !password.includes("#") && !password.includes("$")) {
+        alert("Password must include special characters @ , # , $");
+        return false;
+
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <br>
+  <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-4 py-4 mx-8" style="width: 500px;">
+    <div class="card card0 border-0">
+
+      <div class="col-lg-10">
+        <div class="card1 card border-0 px-5 py-5">
+          <div class="row mb-3 px-3">
+            <h3 class="mb-0 mr-4 mt-2">SIGN UP</h3>
+          </div>
+          <form name="myform" method="get" action="home.html" onsubmit="return validateform()">
+            <div class="row px-3">
+              <label class="mb-1">
+                <h6 class="mb-0 text-sm">Name</h6>
+              </label>
+              <input class="mb-3" type="text" name="name" placeholder="Enter name">
+            </div>
+            <div class="row px-3">
+              <label class="mb-1">
+                <h6 class="mb-0 text-sm">Email Address</h6>
+              </label>
+              <input class="mb-3" type="text" name="emailid" placeholder="Enter a valid email address">
+            </div>
+            <div class="row px-3">
+              <label class="mb-1">
+                <h6 class="mb-0 text-sm">Phone Number</h6>
+              </label>
+              <input class="mb-3" type="text" name="phoneno" placeholder="Enter phone number">
+            </div>
+            <div class="row px-3">
+              <label class="mb-1">
+                <h6 class="mb-0 text-sm">Password</h6>
+              </label>
+              <input type="password" name="password" placeholder="Enter password">
+            </div><br>
+            <div class="row mb-1 px-3">
+              <button type="submit" class="btn btn-blue text-center">Sign up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bg-blue py-4">
+      <div class="row px-3">
+        <small class="ml-4 ml-sm-5 mb-2"><img src="logo.png" height="30" style="width:100%;"></small>
+        <div class="social-contact ml-4 ml-sm-auto">
+          <a href="https://www.facebook.com/"><span class="fa fa-facebook mr-4 text-sm"></span></a>
+          <a
+            href="https://accounts.google.com/v3/signin/identifier?dsh=S1996893548%3A1666980918401172&continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button&service=accountsettings&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AQDHYWrG2ShxnZHTbdvWaW6jCOpPSvPxVIUI_DXlbakLHGehM-YNZKwhtBvcKRhn_vOMQMF-4yqUBg"><span
+              class="fa fa-google-plus mr-4 text-sm"></span></a>
+          <a
+            href="https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid=14650114788_asid=127961666300_crid=601257986827_kw=linked%20in%20login_d=c_tid=kwd-8081146249_n=g_mt=e_geo=9062239_slid=&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMIpNCz_cOD-wIV-ZlmAh15WAZ9EAAYASAAEgIwCfD_BwE&gclsrc=aw.ds"><span
+              class="fa fa-linkedin mr-4 text-sm"></span></a>
+          <a
+            href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><span
+              class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
